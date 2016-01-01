@@ -1,9 +1,15 @@
+/* 全局变量: 分页计数器counter */
+var counter = 0;
+
+/* 全局变量: 分页最大页码值 */
+var max = 10;
+
 /* 页面加载时，生成文章列表页面 */
 window.onload = function(){
 	/* 首页默认显示"法制快讯栏目的文章" */
 	document.getElementById("topic1").className += " active";
-
-	createArticleList(1);
+	counter = 1;
+	createArticleList(1, counter);
 }
 
 
@@ -13,9 +19,9 @@ function createArticleList(topicId)
 	/* 文章图文列表模块 */
 	var articleUl = document.createElement("ul");
 	var str1 = "";
-	for(var i = 1; i <= 15; i++){
+	for(var i = 15*(counter-1) + 1; i <= 15*counter; i++){
 		str1 += "<li class='articleBox' id='" + i + "' onclick='getArticleDetail(" + topicId +", " + i + ")'>"
-		+"<img class='articleImg' src='../img/1.jpg'>"
+		+"<img class='articleImg' src='../img/" + topicId + ".jpg'>"
 		+"<div class='articleWord'>"
 				+"<div class='articleTitle'>"
 					+"我是topic " + topicId + " 第" + i + "篇文章的标题"
@@ -32,9 +38,9 @@ function createArticleList(topicId)
 	var str2
 				="<div id='bottomNav'>"
 				+ 	"<button id='newArticle' class='bottomNavItem' href='' onclick='newArticlePage()'>发布新文章</button>"
-				+ 		"<a id='last' class='bottomNavItem' href=''>上一页</a>"
-				+ 		"<a id='now' class='bottomNavItem'>1/5</a>"
-				+		"<button id='next' class='bottomNavItem' href='' onclick='loadXMLDoc()'>下一页</button>"
+				+ 		"<button id='last' class='bottomNavItem' onclick='lastPage(" + topicId + ")'>上一页</button>"
+				+ 		"<a id='now' class='bottomNavItem'>" + counter + "/" + max + "</a>"
+				+		"<button id='next' class='bottomNavItem' href='' onclick='nextPage(" + topicId + ")'>下一页</button>"
 				+ "</div>";
 
 	bottomBar.innerHTML = str2;
@@ -47,6 +53,27 @@ function createArticleList(topicId)
 	right.appendChild(bottomBar);
 }
 
+/* 分页效果：上一页 */
+function lastPage(topicId)
+{
+	counter--;
+	if (counter >= 1) {
+		createArticleList(topicId)
+	}else{
+
+	}
+}
+
+/* 分页效果：下一页 */
+function nextPage(topicId)
+{
+	counter++;
+	if (counter <= max) {
+		createArticleList(topicId)
+	}else{
+
+	}
+}
 
 /* 修改被选中的navButton的背景颜色, 更换不同主题的文章图文列表 */
 function changeTopic(topicId)
@@ -55,6 +82,7 @@ function changeTopic(topicId)
 		document.getElementById("topic" + i).className = "nav";
 	}
 	document.getElementById("topic" + topicId).className += " active";
+	counter = 1;
 	createArticleList(topicId);
 }
 
@@ -133,5 +161,6 @@ function deleteFun(topicId, id)
 	/* Todo: 删除数据库中对应 id 的文章 */
 
 	/* 返回(生成)相对应 topic 的文章列表页 */
+	counter = 1;
 	createArticleList(topicId);
 }
