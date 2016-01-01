@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ManagePage</title>
+	<meta charset = "utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/managementPage.css">
+</head>
+<body>
+	<div class="parent">
+		<div class="top">
+			<img id="logo" src="../img/lawLogo.png">
+			<strong id="webName">微信·法律平台·管理系统</strong>
+			<a id="logout" href="login.html">退出</a>
+		</div>
+
+		<div class="left">
+			<div id="navBar">
+				<img src="../img/icon_menu_management.png">
+				<strong>管理</strong>
+				<button class="nav" href="" id="topic1" onclick="changeTopic(1)">法制快讯</button>
+				<button class="nav" href="" id="topic2" onclick="changeTopic(2)">焦点访谈</button>
+				<button class="nav" href="" id="topic3" onclick="changeTopic(3)">专题讲座</button>
+				<button class="nav" href="" id="topic4" onclick="changeTopic(4)">成功案例</button>
+			</div>
+		</div>
+
+		<div id="right">
+			<ul id="articleUl"></ul>
+			<div id="bottomBar"></div>	
+		</div>
+
+		<div class="bottom">
+			Copyright © 2015-2016 YongLian. All Rights Reserved.
+		</div>
+	</div>
+
+	<script type="text/javascript" src = "../js/managementPage.js"></script>
+</body>
+</html>

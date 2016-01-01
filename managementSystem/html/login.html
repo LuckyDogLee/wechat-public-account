@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LoginPage</title>
+	<meta charset = "utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+	<div class="top">
+		<img id="logo" src="../img/lawLogo.png">
+		<strong id="webName">微信·法律平台·管理系统</strong>
+	</div>
+	<div class="parent">
+		<div class="child">
+			<div id="loginSection">
+			<table>
+				<tr>
+					<th colspan="2" align="center">
+						<img id="loginLogo" src="../img/lawLogo.png">
+						<div id="loginWebName">法律平台</div>
+					</th>
+				</tr>
+
+				<tr>
+					<td>
+						<img src="../img/user.png"></lable>
+					</td>
+
+					<td>
+						<input id="username" class="inputText" type="text" name="email" placeholder="用户名"  onfocus="stycleChange()"/>
+					</td>
+				</tr>
+
+				<tr>
+					<td><img src="../img/key.png"></td>
+					<td>
+						<input id="password" class="inputText" type="password" name="password" placeholder="密码" onfocus="stycleChange()" />
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2" align="center">
+						<input id="loginButton" type="button" onclick="msg()" value="登录" />
+					</td>
+				</tr>	
+			</table>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../js/login.js"></script>
+</body>
+</html>

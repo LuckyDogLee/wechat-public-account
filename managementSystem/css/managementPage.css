@@ -1,0 +1,263 @@
+html,
+body,
+.parent{
+	margin:0;
+	height:100%;
+	overflow:hidden;
+}
+
+body{
+	background-color: rgb(238, 238, 238);
+	font-family: "Microsoft YaHei";
+}
+
+.top{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	height:55px;
+	color:white;
+	background-color:black;
+	background: -webkit-linear-gradient(rgb(48, 54, 67), rgb(44, 48, 59));
+	line-height: 55px;
+}
+
+.left{
+	position:absolute;
+	left:100px;
+	top:90px;
+	bottom:70px;
+	width:200px;
+	color:black;
+	background-color:white;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+#right{
+	position:absolute;
+	left:302px;
+	top:90px;
+	bottom:70px;
+	right:100px;
+	overflow:auto;
+	color:black;
+	background-color:white;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+.bottom{
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	height:35px;
+	color:black;
+	background-color: rgb(238, 238, 238);
+	line-height: 35px;
+	text-align: center;
+}
+
+#logo{
+	position: relative;
+	left: 100px;
+	top: 5px;	
+}
+
+#webName{
+	position: relative;
+	left: 105px;
+	font-size: 22px;
+}
+
+#logout{
+	text-decoration: none;
+	color: white;
+	display: block;
+	float: right;
+	position: relative;
+	width: 80px;
+	right: 105px;
+	font-size: 15px;
+	text-align: center;
+}
+
+#navBar{
+	position: relative;
+	top: 10px;
+	text-align: center;
+}
+
+.nav{
+	color: white;
+	display: block;
+	margin-top: 10px;
+	background-color: blue;
+	border-radius: 10px;
+	width: 200px;
+
+	border: 0px;
+	padding: 0px;
+	font-size: 25px;
+	font-family: "Microsoft YaHei";
+}
+
+#articleUl{
+	position: absolute;
+	background-color: #fafafa;
+	top: 0px;
+	right: 110px;
+	bottom: 62px;
+	left: 110px;
+	overflow:auto;
+	padding: 0;
+	margin: 0;
+}
+
+.articleBox{
+	width: 120px;
+	height: 130px;
+	box-shadow: 5px 5px 5px #888888;
+	font-size: 10px;
+	display: block;
+	text-decoration: none;
+	color: black;
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.articleImg{
+	display: block;
+	width: 120px;
+	height: 90px;
+}
+
+.articleTitle{
+	text-align: center;
+}
+
+
+#bottomNav{
+	position: absolute;
+	bottom: 30px;
+	right: 160px;
+}
+
+.bottomNavItem{
+	float: left;
+	display: block;
+	text-decoration: none;
+	color: black;
+	margin-left: 10px;
+}
+
+#newArticle{
+	width: 100px;
+	text-align: center;
+	background-color: blue;
+	color: white;
+	border-radius: 10px;
+	
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+	font-size: 16px;
+	font-family: "Microsoft YaHei";
+}
+
+#last{
+	width: 80px;
+	text-align: center;
+	background-color: blue;
+	color: white;
+	border-radius: 10px;
+}
+
+#next{
+	width: 80px;
+	text-align: center;
+	background-color: blue;
+	color: white;
+	border-radius: 10px;
+
+	border: 0px;
+	margin: 0px 0px 0px 10px;
+	padding: 0px;
+	font-size: 16px;
+	font-family: "Microsoft YaHei";
+}
+
+
+
+/* 改变nav的背景色 */
+#navBar button:hover{
+	background-color: darkblue;
+}
+
+.top a:hover{
+	background-color: rgb(90, 90, 100);
+}
+
+.active{
+	background-color: darkblue;
+}
+
+/* 发布新文章 */
+#parent{
+	text-align: center;
+	margin-top: 10px;
+}
+
+#child{
+	display: inline-block;
+}
+
+input{
+	width: 400px;
+	height: 20px;
+	font-weight: bold;
+	font-family: "Microsoft YaHei";
+}
+
+textarea{
+	width: 400px;
+	height: 200px;
+	font-weight: bold;
+	font-family: "Microsoft YaHei";
+}
+
+tr{
+	display: block;
+	margin-top: 10px;
+	width: 490px;
+	text-align: center;
+}
+
+th,
+td{
+	width: 490px;
+	text-align: center;
+}
+
+#newArticleBtn,
+#saveBtn{
+	background-color: blue;
+	border-radius: 10px;
+	width: 200px;
+	height: 30px;
+	color: white;
+
+	border: 0px;
+	padding: 0px;
+	font-size: 20px;
+	font-family: "Microsoft YaHei";
+}
+
+#imgBtn{
+	text-align: right;
+}
+
+.imgItem{
+	margin-right: 20px;
+}
