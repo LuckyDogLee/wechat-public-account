@@ -1,6 +1,7 @@
 /*
  * 本文件采用 “面向过程” 编程，可思考如何转换为 “面向对象” 编程以及是否有必要
  * window.onload = function()-------页面加载时，生成文章列表页面
+ * loadXMLDoc(topicId)--------------向服务器端请求文章的数据
  * createArticleList(topicId)-------生成文章图文列表页面
  * lastPage(topicId)----------------分页效果：上一页
  * nextPage(topicId)----------------分页效果：上一页
@@ -20,8 +21,32 @@
 /* 全局变量: 分页计数器counter */
 var counter = 0;
 
+/* 全局变量: 每个分页的文章数量 */
+var recordNum = 15;
+
 /* 全局变量: 分页最大页码值 */
 var max = 10;
+
+/* 全局变量: 储存文章信息的 jsonObj */
+var jsonObj = 
+{
+	"articles": [
+		{ 
+			"id":"", 
+			"topic":"", 
+			"title":"", 
+			"summary":"", 
+			"content":"", 
+			"imgUrl":"" },
+		{ 
+			"id":"", 
+			"topic":"", 
+			"title":"", 
+			"summary":"", 
+			"content":"", 
+			"imgUrl":"" }
+	]
+}
 
 /* 页面加载时，生成文章列表页面 */
 window.onload = function(){
@@ -31,19 +56,51 @@ window.onload = function(){
 	createArticleList(1, counter);
 }
 
+/* 向服务器端请求文章的数据 */
+function loadXMLDoc(topicId)
+{
+	counter++;
+
+	var xmlhttp;
+
+	if (window.XMLHttpRequest){
+		// code for IE7+, Firefox, Chrome, Opera, Safari
+		xmlhttp=new XMLHttpRequest();
+	}else{
+		// code for IE6, IE5
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+
+	xmlhttp.open("GET","article/searching?counter=" + counter + "&recordNum="
+		+ recordNum + "&topic=" + topicId , false);
+	xmlhttp.send();
+
+	var jsonStr =xmlhttp.responseText;
+	var jsonObj = eval ("(" + jsonStr + ")");
+	return jsonObj;
+}
 
 /* 生成文章图文列表页面 */
 function createArticleList(topicId)
 {
+	// var jsonObj = loadXMLDoc(topicId);
+	
+
 	/* 文章图文列表模块 */
 	var articleUl = document.createElement("ul");
 	var str1 = "";
-	for(var i = 15*(counter-1) + 1; i <= 15*counter; i++){
-		str1 += "<li class='articleBox' id='" + i + "' onclick='getArticleDetail(" + topicId +", " + i + ")'>"
-		+"<img class='articleImg' src='../img/" + topicId + ".jpg'>"
+	for(var i = recordNum*(counter-1) + 1; i <= recordNum*counter; i++){
+
+		jsonObj.articles[0].id = i;
+		jsonObj.articles[0].topic = topicId;
+		jsonObj.articles[0].title = "我是topic " + topicId + " 第" + i + "篇文章的标题";
+		jsonObj.articles[0].imgUrl = "../img/" + topicId + ".jpg";
+
+		str1 += "<li class='articleBox' id='" + jsonObj.articles[0].id + "' onclick='getArticleDetail(" + topicId +", " + i + ")'>"
+		+"<img class='articleImg' src='" + jsonObj.articles[0].imgUrl + "'>"
 		+"<div class='articleWord'>"
 				+"<div class='articleTitle'>"
-					+"我是topic " + topicId + " 第" + i + "篇文章的标题"
+					+jsonObj.articles[0].title
 				+"</div>"
 			+"</div>"
 		+"</li>";
@@ -163,12 +220,19 @@ function getArticleDetail(topicId, id)
 	tr1.innerHTML = "<div id='imgBtn'><img class='imgItem' src='../img/editor.png' onclick='editor(" + id + ")'>"
 	+ "<img class='imgItem' src='../img/delete.png' onclick='deleteFun(" + topicId + ", " + id + ")'></div>";
 	
+	// var jsonObj = loadXMLDoc(topicId);
+	jsonObj.articles[0].id = id;
+	jsonObj.articles[0].topic = topicId;
+	jsonObj.articles[0].title = "Topic " + topicId + " 第" + id + "篇文章的标题";
+	jsonObj.articles[0].summary = "Topic " + topicId + " 第" + id + "篇文章的概要";
+	jsonObj.articles[0].content = "Topic " + topicId + " 第" + id + "篇文章的内容";
+	jsonObj.articles[0].imgUrl = "Topic " + topicId + " 第" + id + "篇文章的图片";
 
-	document.getElementById("title").value = "Topic " + topicId + " 第" + id + "篇文章的标题";
-	document.getElementById("topic").value = "Topic " + topicId + " 第" + id + "篇文章的类型";
-	document.getElementById("img").value = "Topic " + topicId + " 第" + id + "篇文章的图片";
-	document.getElementById("summary").value = "Topic " + topicId + " 第" + id + "篇文章的概要";
-	document.getElementById("content").value = "Topic " + topicId + " 第" + id + "篇文章的内容";
+	document.getElementById("title").value = jsonObj.articles[0].title;
+	document.getElementById("topic").value = jsonObj.articles[0].topic;
+	document.getElementById("img").value = jsonObj.articles[0].imgUrl;
+	document.getElementById("summary").value = jsonObj.articles[0].summary;
+	document.getElementById("content").value = jsonObj.articles[0].content;
 
 	/* 设置文章为“不可编辑”：阅读模式 */
 	setDisabled(true);
