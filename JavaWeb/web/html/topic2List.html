@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>weChatPage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/topicList.css">
+</head>
+
+<body>
+<div id="ibody">
+    <div class="weChatTitle">法制快讯</div>
+    <div class="summary">法律新闻，一网打尽</div>
+
+    <ul id="articleBox"></ul>
+
+
+    <div class="tail">
+        <div class="tailBox">
+            <span><img src="../img/refresh.png" onclick="loadXMLDoc()"></span>
+            <div id="more">点击加载更多</div>
+        </div>
+    </div>
+    <script src="../js/topicList.js"></script>
+    <script>
+        window.onload = function()
+        {
+            topic = 2;
+            wonload(2);
+        }
+    </script>
+</div>
+</body>
+</html>

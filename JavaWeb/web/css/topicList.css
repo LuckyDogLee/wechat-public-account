@@ -1,0 +1,149 @@
+body{
+    margin: 0;
+    width: 640px;
+    /*height: 1136px;*/
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fafafa;
+}
+
+img{
+    display: block;
+    border: none;
+}
+
+font{
+    color: #333333;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    display: block;
+}
+
+.weChatTitle{
+    font-family: "Microsoft YaHei";
+    font-size: 34px;
+    padding-left:20px;
+    padding-top:20px;
+}
+
+.summary{
+    font-family: "Microsoft YaHei";
+    font-size: 22px;
+    padding-left:20px;
+    padding-top:10px;
+}
+
+/*���¸�����ʽ*/
+.article{
+    width: 600px;
+    height: 178px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    margin-top: 15px;
+}
+
+.articleImg{
+    width: 200px;
+    height: 158px;
+    padding-top: 10px;
+    padding-left: 10px;
+    float: left;
+}
+
+img{
+    width: 158px;
+    height: 158px;
+}
+
+.articleContent{
+    width: 380px;
+    height: 158px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.articleTitle{
+    font-family: "Microsoft YaHei";
+    font-size: 25px;
+    padding-top: 10px;
+    color: #333333;
+}
+
+.ctText{
+    width: 370px;
+    height: 110px;
+    margin-top: 10px;
+}
+
+.ctText a{
+    font-family: "Microsoft YaHei";
+    font-size: 22px;
+    color: #999;
+}
+
+/*�ײ�������*/
+.tail{
+    width: 640px;
+    height: 60px;
+}
+
+#more{
+    font-family: "Microsoft YaHei";
+    font-size: 22px;
+    color: #CCC;
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+.tail a, .tail span{
+    float: left;
+}
+
+.tail img{
+    width: 40px;
+    height: 40px;
+}
+
+.tailBox{
+    width: 200px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+}
+
+
+/*中间内容*/
+.caseTitle{
+    font-family:"Microsoft YaHei";
+    font-size:36px;
+    padding-left:20px;
+    padding-top:20px;
+}
+
+.caseSummary{
+    font-family:"Microsoft YaHei";
+    font-size:22px;
+    padding-left:20px;
+    padding-top:10px;
+    color:#999;
+}
+
+
+.caseText{
+    width:600px;
+    height:700px;
+    margin-left:20px;
+    margin-top:40px;
+
+    font-family:"Microsoft YaHei";
+    font-size:28px;
+    text-indent:59px;
+    line-height:39px;
+    letter-spacing:2px;
+}

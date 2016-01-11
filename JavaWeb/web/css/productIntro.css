@@ -1,0 +1,18 @@
+body{ margin:0;width:640px; height:1136px; margin-left:auto; margin-right:auto; background-color:#fafafa;}
+img{ display:block; border:none;}
+font{color:#333333; display:block;}
+a{ text-decoration:none; display:block;}
+
+
+/*中间内容*/
+.specialtitle{ font-family:"方正黑体简体"; font-size:34px; padding-left:20px; padding-top:20px; line-height:42px; letter-spacing:2px;}
+.recommendtext{ width:600px; height:auto; margin-left:20px;font-family:"方正黑体简体"; font-size:26px; margin-top:40px; text-indent:52px;}
+.purpose{ width:600px; height:40px; margin-left:20px; line-height:40px; margin-top:40px;}
+.purpose a,.purpose span{ float:left;}
+.purpose span{font-family:"方正黑体简体"; font-size:26px; }
+.purpose a{font-family:"方正中等线"; font-size:22px; color:666666;}
+.goal{ width:600px; height:82px; margin-left:20px; line-height:40px;}
+.goal span{font-family:"方正黑体简体"; font-size:26px;  width:234px; height:40px; display:block; float:left; }
+.goal a{font-family:"方正中等线"; font-size:22px; color:666666; width:366px; height:auto; float:left;}
+.recommendimg{ width:600px; height:300px; margin-top:60px; margin-left:20px;}
+

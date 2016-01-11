@@ -1,0 +1,103 @@
+body{
+	margin: 0px;
+	font-family: "Microsoft YaHei UI";
+}
+
+.top{
+	background: -webkit-linear-gradient(rgb(48, 54, 67), rgb(44, 48, 59));
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	color:white;
+	height:55px;
+	line-height: 55px;
+}
+
+#logo{
+	position: relative;
+	left: 100px;
+	top: 5px;	
+}
+
+#webName{
+	position: relative;
+	left: 105px;
+	font-size: 22px;
+}
+
+.parent{
+	background-color: rgb(238, 238, 238);
+	position: absolute;
+	top: 55px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+}
+
+.child{
+	background-color: rgb(255, 255, 255);
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 5px 5px 5px #888888;
+	text-align: center;
+}
+
+
+
+/* Login Section */
+#loginSection{
+	width: 385px;
+	height: 280px;
+	display: inline-block;
+}
+
+#loginLogo,
+#loginWebName{
+	font-size: 36px;
+	font-weight: bold;
+	float: left;
+	position: relative;
+}
+
+#loginLogo{
+	left: 75px;
+	width: 60px;
+	height: 45px;
+}
+
+#loginWebName{
+	left: 90px;
+}
+
+tr{
+	height: 70px;
+}
+
+.inputText{
+	width: 300px;
+	height: 35px;
+	position: relative;
+	left: 10px;
+	font-size: 16px;
+}
+
+#loginButton{
+	width: 380px;
+	height: 30px;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: #0000CC;
+	color: white;
+	border: 0px;
+	border-radius: 5px;
+}
+
+.invalid{
+	border-color: red;
+	color: red;
+}

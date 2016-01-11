@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <servlet-name>adding</servlet-name>
+        <servlet-class>article.adding</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adding</servlet-name>
+        <url-pattern>/article/adding</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>removing</servlet-name>
+        <servlet-class>article.removing</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>removing</servlet-name>
+        <url-pattern>/article/removing</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>modifying</servlet-name>
+        <servlet-class>article.modifying</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>modifying</servlet-name>
+        <url-pattern>/article/modifying</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>searching</servlet-name>
+        <servlet-class>article.searching</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>searching</servlet-name>
+        <url-pattern>/article/searching</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>article.login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/article/login</url-pattern>
+    </servlet-mapping>
+
+
+    <welcome-file-list>
+        <welcome-file>html/login.html</welcome-file>
+    </welcome-file-list>
+</web-app>

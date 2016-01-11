@@ -1,0 +1,18 @@
+body{ margin:0;width:640px; height:1136px; margin-left:auto; margin-right:auto; background-color:#fafafa;}
+img{ display:block; border:none;}
+font{color:#333333; display:block;}
+a{ text-decoration:none; display:block;}
+
+/*中间内容*/
+.specialtitle{ font-family:"方正黑体简体"; font-size:34px; padding-left:20px; padding-top:20px; line-height:42px; letter-spacing:2px;}
+.url{ width:600px; height:39px; margin-left:20px; margin-top:100px;}
+.url span,.url a{ float:left; line-height:39px;}
+.url span{ font-family:"方正黑体简体"; font-size:26px;}
+.url a{ font-family:"Helvetica Regular"; font-size:26px; color:#666666; margin-left:20px;}
+.contactline{ width:600px; height:2px; background-color:#666666;margin-top:20px; margin-right:auto; margin-left:auto;}
+.contactphone{ width:600px; height:39px; margin-left:20px; margin-top:20px;}
+.contactphone span,.contactphone a{ float:left; line-height:39px;}
+.contactphone span{ font-family:"方正黑体简体"; font-size:26px;}
+.contactphone a{ font-family:"Helvetica Regular"; font-size:26px; color:#666666; margin-left:20px;}
+.contactimg{ width:600px; height:372px; margin-left:20px; margin-top:120px;}/* CSS Document */
+

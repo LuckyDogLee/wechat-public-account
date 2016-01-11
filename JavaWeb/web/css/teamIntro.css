@@ -1,0 +1,12 @@
+body{ margin:0;width:640px; height:1136px; margin-left:auto; margin-right:auto; background-color:#fafafa;}
+img{ display:block; border:none;}
+font{color:#333333; display:block;}
+a{ text-decoration:none; display:block;}
+
+/*中间内容*/
+.specialtitle{ font-family:"方正黑体简体"; font-size:34px; padding-left:20px; padding-top:20px; line-height:42px; letter-spacing:2px;}
+.teamimg{ width:600px; height:380px;margin-top:40px; margin-left:20px}
+.ti1,.ti2,.ti3,.ti4{ float:left; width:290px; height:180px;}
+.ti2,.ti4{ margin-left:20px;}
+.ti3, .ti4{ margin-top:20px;}
+.teamtext{ width:600px; height:auto; margin-left:20px; margin-top:50px;font-family:"方正黑体简体"; font-size:26px; line-height:36px; letter-spacing:2px; text-indent:52px;}
