@@ -1,2 +1,3 @@
-# 微信公众号
-关于法律资讯的微信公众号及其管理系统 (Java版本)
+# WeChat public account
+
+Built with Java
